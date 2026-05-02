@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy Chair Escape</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="topbar" aria-label="Game status">
+        <div>
+          <p class="eyebrow">Cozy Chair Escape</p>
+          <h1 id="room-title">The Study</h1>
+        </div>
+        <div class="topbar-actions">
+          <a class="home-link" href="../../index.html">All games</a>
+          <button class="reset-button" id="reset-button" type="button">Reset</button>
+        </div>
+      </section>
+
+      <section class="play-area" aria-label="Escape room">
+        <aside class="hint-panel" aria-label="Candlestick piece silhouettes">
+          <p class="panel-label">Find the five pieces</p>
+          <div class="silhouette-list" id="silhouette-list"></div>
+        </aside>
+
+        <section class="scene-wrap">
+          <div class="scene" id="scene" aria-live="polite"></div>
+          <div class="message-box" id="message-box">
+            You wake in a soft armchair with a velvet cord around your wrists. The old candlestick on the lock is missing five little brass pieces.
+          </div>
+        </section>
+      </section>
+
+      <section class="inventory" aria-label="Inventory">
+        <div class="chest">
+          <div class="chest-lid"></div>
+          <div class="inventory-title">Treasure Chest</div>
+          <div class="inventory-slots" id="inventory-slots"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="win-screen" id="win-screen" aria-hidden="true">
+      <div class="win-card">
+        <p class="eyebrow">Unlocked</p>
+        <h2>You slipped free.</h2>
+        <p>
+          The completed candlestick turns with a gentle click, the velvet cord falls away,
+          and the room feels suddenly much less mysterious.
+        </p>
+        <button id="play-again" type="button">Play again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
